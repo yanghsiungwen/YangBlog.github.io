@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    position: relative;
+    background-color: #961616;
+}
+.window{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.window>img{
+    width: 100%;
+    height: 100%;
+    /* left: -30px; */
+    position: absolute;
+    z-index: -1;
+    transform: scale(1.5);
+    animation: window_img .45s ease-out forwards;
+}
+.table{
+    width: 100%;
+    height: 20vh;
+    user-select: none;
+    position: relative;
+}
+.bg{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.bg h1{
+    position: absolute;
+    top: 350%;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 10px;
+    color: #fff;
+    opacity: 0;
+    animation:bg_h1 .45s ease-out forwards;
+}
+.bg p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 10px;
+    color: #fff;
+    opacity: 0;
+    animation: bg_p .45s ease-out forwards;
+}
+.bg h5{
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 10px;
+    color: #fff;
+}
+.bg h6{
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 10px;
+    color: #fff;
+    opacity: 0;
+    animation: bg_h6 .45s ease-out forwards;
+}
+/* :nth-child(n) 选择父元素中的第n个标签 */
+.bg i:nth-child(4){
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 10px;
+    color: #fff;
+    animation: bg_i 1s  infinite;
+}
+/* :nth-of-type(n)选择当前第n个标签 */
+.bg i:nth-of-type(2){
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 10px;
+    color: #fff;
+    animation: bg_i 1s .5s infinite;
+}
+@keyframes bg_h1{
+    from{
+        top:70%;
+        opacity: 0;
+    }
+    to{
+        top: 35%;
+        opacity: 1;
+    }
+}
+@keyframes bg_p{
+    from{
+        top:70%;
+        opacity: 0;
+    }
+    to{
+        top: 50%;
+        opacity: 1;
+    }
+}
+@keyframes bg_h6{
+    from{
+        bottom: 0;
+        opacity: 0;
+    }
+    to{
+        bottom: 15%;
+        opacity: 1;
+    }
+}
+@keyframes bg_i{
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes window_img{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.5);
+    }
+}
+
+/* 下半部分 */
+/* .up{
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+    top: 100vh;
+} */
+.up i:nth-child(1){
+    position: absolute;
+    top: 100vh;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 10px;
+    color: #fff;
+    animation: bg_i 1s .5s infinite;
+}
+.up i:nth-child(2){
+    position: absolute;
+    top: 105vh;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 10px;
+    color: #fff;
+    animation: bg_i 1s infinite;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color:#fff
+}
+.container .con{
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+}
+.box{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0);
+    transition: border .2s ease-out;
+    border-radius: 20px;
+}
+.box:hover{
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: border .3s ease-out;
+}
+.content{
+    width: 100%;
+    height: 100%;
+}
+.content>a>img{
+    width: 80px;
+}
