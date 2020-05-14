@@ -35,10 +35,9 @@ function timer() {
     let hh = (time.getHours() + '').padStart(2, '0')
     let mm = (time.getMinutes() + '').padStart(2, '0')
 
-    let y = time.getFullYear()
     let m = (time.getMonth() + 1 + '').padStart(2, '0')
     let d = (time.getDate() + '').padStart(2, '0')
 
     $('.bg>h1').html(hh + ':' + mm)
-    $('.bg>p').html(y + '年' + m + '月' + d + '日')
+    $('.bg>p').html(m + '月' + d + '日')
 }
