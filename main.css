@@ -198,9 +198,9 @@ body{
 .content>a>img{
     width: 80px;
 }
-@media screen and (max-width:375px){
+@media screen and (min-width:375px){
     .container .con{
-    grid-gap: 5px;
+    grid-gap: 10px;
     }
     .content>a>img{
         width: 60px;
