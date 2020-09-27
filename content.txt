@@ -3,4 +3,6 @@ node
 express
 git
 new dev branch
+**功能开发中**
+对master分支进行Bug修复
 ***fixedbug***
